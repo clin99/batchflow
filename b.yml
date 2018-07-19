@@ -1,0 +1,16 @@
+---
+attribute:          # Attributes of the binary. 
+  - language: cpp
+  - compiler: gcc
+  - version: 7.3 
+
+cell: 
+  - file_name: binary_b
+  - name: B    # Module name
+  - pin:
+      input: 
+        - &argv1 i1        # Name of primary input 1
+      output:
+        - o1        # Name of primary output 1
+  - execute: ./binary_b *argv1 1.23
+...

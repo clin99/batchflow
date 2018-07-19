@@ -1,0 +1,25 @@
+---
+attribute:          # Attributes of the binary. 
+  - language: Java
+  - compiler: javac
+  - version: 9
+
+prepare:   # This section shows the environment needed by the program
+  - os: ubuntu
+  - var:          # environment variables
+     - PATH=/home/clin99
+     - DISPLAT=0:0
+  - build: javac Example.java
+
+
+cell: 
+  - file_name: Example.java
+  - name: C    # Module name
+  - pin:
+      input: 
+        - &argv1 i1        # Name of primary input 1 
+        - &argv2 i2        # Name of primary input 2
+      output:
+        - o1        # Name of primary output 1
+  - execute: java Example *argv1 *argv2
+...

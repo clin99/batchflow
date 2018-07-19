@@ -1,0 +1,27 @@
+---
+attribute:          # This section describes the attributes of the binary. (optional)
+  - language: cpp
+  - compiler: gcc
+  - version: 7.3 
+
+prepare:            # This section shows the environment needed by the program
+  - os: ubuntu
+  - var:          # environment variables
+      - PATH=/home/clin99
+      - DISPLAT=0:0 
+  - dependency:
+      - sudo apt-get install gcc-7
+  - build: 
+      - g++ a.cpp -o binary_a
+
+cell:               # This section describes the IO of the program and the execution method
+  - binary: binary_a
+  - name: A    # Module Name
+  - pin:
+      name: i1
+      type: stream
+         
+  - pin:
+      name: i2
+      type: dependency
+...
