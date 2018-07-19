@@ -1,0 +1,24 @@
+MODULE:
+  - name: Combine 
+  - pin:
+      name: in_1
+      direction: in 
+      type: stream 
+  - pin:
+      name: in_2
+      direction: in 
+      type: stream 
+  - pin:
+      name: in_3
+      direction: in 
+      type: stream 
+  - pin:
+      name: out
+      direction: out
+      type: stream 
+  - cell:
+      filename: a.yml
+      filename: b.yml 
+      filename: c.yml
+  - module:
+      filename: sub_module.yml

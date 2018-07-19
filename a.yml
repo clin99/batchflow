@@ -18,10 +18,24 @@ cell:               # This section describes the IO of the program and the execu
   - binary: binary_a
   - name: A    # Module Name
   - pin:
+      direction: in
       name: i1
-      type: stream
-         
+      type: stream        
   - pin:
+      direction: in
       name: i2
-      type: dependency
+      type: dependency 
+  - pin:
+      direction: out
+      name: o1
+      type: stream 
+  - arg:
+      name: learning_rate
+      type: float 
+      required: false
+      default: 0.1 
+  - arg: 
+      name: training_data
+      type: path 
+      required: true
 ...
