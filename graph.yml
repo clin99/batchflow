@@ -1,0 +1,15 @@
+MODULE: 
+  - name: MyModule 
+  - pin: 
+      name: in_a1 
+      direction: in 
+      type: stream 
+  - pin:
+      name: in_a2 
+      direction: in 
+      type: stream 
+  - pin:
+      name: out_c 
+      direction: out 
+      type: stream
+

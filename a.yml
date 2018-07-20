@@ -28,7 +28,9 @@ cell:               # This section describes the IO of the program and the execu
   - pin:
       direction: out
       name: o1
-      type: stream 
+      type: stream  
+
+# Below is the input arguments of the binary
   - arg:
       name: learning_rate
       type: float 

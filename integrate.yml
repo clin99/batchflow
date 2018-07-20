@@ -16,9 +16,13 @@ MODULE:
       name: out
       direction: out
       type: stream 
-  - cell:
-      filename: a.yml
-      filename: b.yml 
-      filename: c.yml
-  - module:
-      filename: sub_module.yml
+
+
+
+
+#  - cell:
+#      filename: a.yml
+#      filename: b.yml 
+#      filename: c.yml
+#  - module:
+#      filename: sub_module.yml
